@@ -4,7 +4,7 @@ from .forms import PostForm
 # Create your views here.
 def index(request):
     postes = Post.objects.all()
-    return render(request, '../../../../../xue/binbin-1-master/Training/templates/index.html', {'postes': postes})
+    return render(request, 'index.html', {'postes': postes})
 def edit(request,id):
     po=get_object_or_404(Post,id=id)
     if request.method=="POST":
